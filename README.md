@@ -1,24 +1,31 @@
+# FORKED
+
+The original repo is not working with maven / jitpack.
+
+Trying to preserve the code if it goes missing from github.
+
 # OverScrollBouncy
-#####An Android library which supports overscroll bounce effect. 
-It uses spring mechanism for animating the scrollback. It currently supports ***RecyclerView*** with LinearLayoutManager.
+
+##### An Android library which supports overscroll bounce effect.
+
+It uses spring mechanism for animating the scrollback. It currently supports **_RecyclerView_** with LinearLayoutManager.
 
 ## Demo
-![Demo](https://github.com/chthai64/overscroll-bouncy-android/raw/master/arts/OverscrollDemo.gif)
 
-<a href="https://play.google.com/store/apps/details?id=com.chauthai.overscrolldemo">
-<img alt="Get it on Google Play" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/200px-Get_it_on_Google_play.svg.png" />
-</a>
+![Demo](https://github.com/chthai64/overscroll-bouncy-android/raw/master/arts/OverscrollDemo.gif)
 
 ## Basic Usage
 
 ##### Dependencies
+
 ```groovy
 dependencies {
-    compile 'com.chauthai.overscroll:overscroll-bouncy:0.1.1'
+    compile 'com.fugita.overscroll:overscroll-bouncy:main'
 }
 ```
 
 ##### RecyclerView
+
 ```xml
 <com.chauthai.overscroll.RecyclerViewBouncy
     android:id="@+id/recyclerView"
@@ -27,9 +34,11 @@ dependencies {
 ```
 
 ##### ListView, ScrollView
+
 coming soon.
 
 ## Advanced Usage
+
 ```xml
 <com.chauthai.overscroll.RecyclerViewBouncy
     android:id="@+id/recyclerView"
@@ -38,25 +47,29 @@ coming soon.
 
     app:tension="1000"
     app:friction="200"
-    
+
     app:gapLimit="220"
     app:speedFactor="5"
-    
+
     app:viewCountEstimateSize="5"
     app:maxAdapterSizeToEstimate="20"/>
 ```
+
 ##### Optional params:
-* ```tension``` Tension of the spring. It should be set to a high value (ex. 1000) for smooth animation.
-* ```friction``` Friction of the spring. High friction value will slow down the scroll-back speed.
-* ```gapLimit``` The maximum over-scroll gap size (in dp). The default value is 220dp.
-* ```speedFactor``` The higher the speedFactor is, the less the view will utilize the gap limit. Minimum value is 1.
-* ```viewCountEstimateSize``` (for RecyclerView/Listview) The number of children views to estimate the content size of RecyclerView (or ListView). The estimation is computed by averaging the children views size then multiply by the total items inside the adapter.
-* ```maxAdapterSizeToEstimate``` (for RecyclerView/Listview) The maximum adapter size (number of items in the adapter) that the system will include content size estimation of the RecyclerView (or ListView) in the calculation.
- 
+
+- `tension` Tension of the spring. It should be set to a high value (ex. 1000) for smooth animation.
+- `friction` Friction of the spring. High friction value will slow down the scroll-back speed.
+- `gapLimit` The maximum over-scroll gap size (in dp). The default value is 220dp.
+- `speedFactor` The higher the speedFactor is, the less the view will utilize the gap limit. Minimum value is 1.
+- `viewCountEstimateSize` (for RecyclerView/Listview) The number of children views to estimate the content size of RecyclerView (or ListView). The estimation is computed by averaging the children views size then multiply by the total items inside the adapter.
+- `maxAdapterSizeToEstimate` (for RecyclerView/Listview) The maximum adapter size (number of items in the adapter) that the system will include content size estimation of the RecyclerView (or ListView) in the calculation.
+
 ## Credits
+
 [Rebound](http://facebook.github.io/rebound/) library.
 
 ## License
+
 ```
  The MIT License (MIT)
 
