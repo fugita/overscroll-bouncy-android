@@ -20,7 +20,7 @@ It uses spring mechanism for animating the scrollback. It currently supports **_
 
 ```groovy
 dependencies {
-    compile 'com.fugita.overscroll:overscroll-bouncy:main'
+    compile 'com.chthai.overscroll:overscroll-bouncy:master'
 }
 ```
 
